@@ -4,5 +4,6 @@
   "alwaysUpdateLinks": true,
   "promptDelete": false,
   "attachmentFolderPath": "_bin/images",
-  "livePreview": true
+  "livePreview": true,
+  "propertiesInDocument": "source"
 }

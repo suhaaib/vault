@@ -11,11 +11,43 @@
             "id": "931d730230ec942e",
             "type": "leaf",
             "state": {
-              "type": "home-tab-view",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "02 Areas/Business Analytics.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "8bfa735e9ebd08e8",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "04 Archives/Business Analyst Certifications.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "0b235a53842e9844",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "04 Archives/Agile vs Waterfall.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -69,8 +101,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 3
+        ]
       }
     ],
     "direction": "horizontal",
@@ -90,6 +121,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "04 Archives/Agile vs Waterfall.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -106,6 +138,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "04 Archives/Agile vs Waterfall.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -127,7 +160,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "04 Archives/Agile vs Waterfall.md"
+              }
             }
           },
           {
@@ -170,13 +205,15 @@
       "homepage:Open homepage": false
     }
   },
-  "active": "931d730230ec942e",
+  "active": "0b235a53842e9844",
   "lastOpenFiles": [
+    "02 Areas/Business Analytics.md",
+    "04 Archives/Agile vs Waterfall.md",
+    "04 Archives/Business Analyst Certifications.md",
     "02 Areas/Data Visualization.md",
     "00 Journal/2024/Daily/02/2024-02-23.md",
     "00 Journal/2024/Monthly/2024-02.md",
     "01 Projects/Business Analyst Interview Prep.md",
-    "02 Areas/Business Analytics.md",
     "02 Areas/Power BI.md",
     "02 Areas/Tableau.md",
     "04 Archives/Business Analyst Role.md",
@@ -196,8 +233,6 @@
     "_inbox/_inbox.md",
     "05 Canvas/05 Canvas.md",
     "00 Journal/00 Journal.md",
-    "05 Canvas/index.md",
-    "01 Projects/index.md",
     "03 Resources/Videos",
     "_bin/images/The Power of Now - Eckhart Tolle/2776ea0fc149c7b8ebb22ce33431c0c8_MD5.jpg",
     "_bin/images/The Power of Now - Eckhart Tolle",
