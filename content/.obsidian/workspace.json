@@ -126,7 +126,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 330.5
+    "width": 330.5,
+    "collapsed": true
   },
   "right": {
     "id": "7496b67f21e2e34b",
@@ -201,21 +202,14 @@
               "type": "podcast_player_view",
               "state": {}
             }
-          },
-          {
-            "id": "930ba19cb68664e5",
-            "type": "leaf",
-            "state": {
-              "type": "chatbot-view",
-              "state": {}
-            }
           }
         ],
-        "currentTab": 6
+        "currentTab": 5
       }
     ],
     "direction": "horizontal",
-    "width": 407.5
+    "width": 407.5,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -235,7 +229,7 @@
       "bmo-chatbot:BMO Chatbot": false
     }
   },
-  "active": "1004da06164859e3",
+  "active": "6371f670f74f2408",
   "lastOpenFiles": [
     "02 Areas/Project Management.md",
     "02 Areas/JIRA.md",
