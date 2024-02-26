@@ -1,0 +1,96 @@
+{
+  "general": {
+    "model": "gpt-4",
+    "system_role": "You're a helpful assistant.",
+    "max_tokens": "",
+    "temperature": "1.00",
+    "allowReferenceCurrentNote": true
+  },
+  "appearance": {
+    "userName": "USER",
+    "chatbotName": "ASSISTANT",
+    "userMessageBackgroundColor": "--background-primary",
+    "botMessageBackgroundColor": "--background-secondary",
+    "chatBoxBackgroundColor": "--interactive-accent",
+    "chatBoxBorderColor": "--interactive-accent",
+    "allowHeader": true
+  },
+  "editor": {
+    "system_role_prompt_select_generate": "You are a helpful assistant."
+  },
+  "chatHistory": {
+    "chatHistoryPath": "BMO/",
+    "templateFilePath": "",
+    "allowRenameNoteTitle": false
+  },
+  "prompts": {
+    "promptFolderPath": "",
+    "prompt": ""
+  },
+  "OllamaConnection": {
+    "RESTAPIURL": "",
+    "allowOllamaStream": false,
+    "ollamaModels": [],
+    "ollamaParameters": {
+      "keep_alive": "",
+      "mirostat": "0",
+      "mirostat_eta": "0.1",
+      "mirostat_tau": "5.0",
+      "num_ctx": "2048",
+      "num_gqa": "",
+      "num_thread": "",
+      "repeat_last_n": "64",
+      "repeat_penalty": "1.1",
+      "seed": "",
+      "stop": [],
+      "tfs_z": "1.0",
+      "top_k": "40",
+      "top_p": "0.9"
+    }
+  },
+  "RESTAPIURLConnection": {
+    "APIKey": "",
+    "RESTAPIURL": "",
+    "allowRESTAPIURLDataStream": false,
+    "RESTAPIURLModels": []
+  },
+  "APIConnections": {
+    "openAI": {
+      "APIKey": "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",
+      "openAIBaseUrl": "https://api.openai.com/v1",
+      "allowOpenAIBaseUrlDataStream": true,
+      "openAIBaseModels": []
+    },
+    "mistral": {
+      "APIKey": "",
+      "mistralModels": [],
+      "allowStream": false
+    },
+    "googleGemini": {
+      "APIKey": "",
+      "geminiModels": []
+    },
+    "anthropic": {
+      "APIKey": ""
+    }
+  },
+  "toggleGeneralSettings": true,
+  "toggleAppearanceSettings": true,
+  "toggleEditorSettings": true,
+  "toggleChatHistorySettings": true,
+  "togglePromptSettings": true,
+  "toggleAPIConnectionSettings": true,
+  "toggleOpenAISettings": true,
+  "toggleMistralSettings": false,
+  "toggleGoogleGeminiSettings": true,
+  "toggleAnthropicSettings": false,
+  "toggleRESTAPIURLSettings": true,
+  "toggleOllamaSettings": true,
+  "toggleAdvancedSettings": false,
+  "allModels": [
+    "gpt-3.5-turbo",
+    "gpt-3.5-turbo-1106",
+    "gpt-4",
+    "gpt-4-turbo-preview"
+  ]
+}

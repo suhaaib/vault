@@ -7,7 +7,10 @@ tags:
   - type/litnote
 ---
 
-SQL (Structured Query Language) is a powerful tool used for managing and manipulating relational databases. 
+SQL (Structured Query Language) is a powerful tool used for managing and manipulating relational databases (Example-MySQL, Oracle, PostgreSQL)
+
+# Database:
+An organized collection of structured data, usually controlled by a database management system(DBMS).
 # SQL Basics:
 
 1. **SELECT Statement:**

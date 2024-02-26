@@ -91438,14 +91438,14 @@ var compareVersions = (v12, v2) => {
 };
 
 // release-notes.mjs
-var releaseVersion = "3.0.0";
+var releaseVersion = "3.1.0";
 var showNewFeatures = true;
-var showBreakingChanges = true;
-var newFeatures = "Main feature of this release is possibility to process messages older than 24 hours if Obsidian wasn't running. This feature available only for the plugin's channel subscribers";
+var showBreakingChanges = false;
+var newFeatures = "This release adds the possibility to append new messages either above or below a specified note heading.";
 var breakingChanges = `\u26A0\uFE0F <b><i>In this release, approximately 30 files have been changed. Although this version has gone through beta testing, please pay close attention during the initial runs of the plugin with the old message processing feature enabled.</i></b> \u26A0\uFE0F`;
-var telegramChannelLink = "https://t.me/+J23BEZyLgoYzOTBk";
+var telegramChannelLink = "https://t.me/tribute/app?startapp=s1uX";
 var telegramChannelAHref = `<a href='${telegramChannelLink}'>channel</a>`;
-var telegramChannelIntroduction = `Subscribe to the plugin's ${telegramChannelAHref} to not only silence these informational messages in your bot, but also to be the first to get all the latest updates.`;
+var telegramChannelIntroduction = `Subscribe to the plugin's ${telegramChannelAHref} to not only silence these informational messages in your bot, but also to be the first to get all the latest updates (paid access via the @tribute bot).`;
 var telegramChatLink = "<a href='https://t.me/ObsidianTelegramSync'>chat</a>";
 var telegramChatIntroduction = `For discussions, please feel free to join the plugin's ${telegramChatLink}.`;
 var donation = "If you appreciate this plugin and would like to support its continued development, please consider donating through the buttons below!";
@@ -92038,15 +92038,26 @@ async function getUniqueFilePath(vault, createdFilePaths, initialFilePath, date,
 async function appendContentToNote(vault, notePath, newContent, startLine = "", delimiter = defaultDelimiter, reversedOrder = false) {
   if (!notePath || !newContent.trim())
     return;
+  if (startLine == void 0)
+    startLine = "";
   let noteFile = vault.getAbstractFileByPath(notePath);
-  if (!noteFile) {
-    noteFile = await vault.create(notePath, newContent);
-  } else {
-    const currentContent = await vault.read(noteFile);
-    const content = startLine ? currentContent.replace(startLine, startLine + delimiter + newContent) : reversedOrder ? newContent + delimiter + currentContent : currentContent + delimiter + newContent;
-    if (currentContent != content)
-      await vault.modify(noteFile, content);
+  if (!noteFile)
+    noteFile = await vault.create(notePath, "");
+  const currentContent = await vault.read(noteFile);
+  let index = reversedOrder ? 0 : currentContent.length;
+  if (currentContent.length == 0 && !startLine)
+    delimiter = "";
+  newContent = reversedOrder ? newContent + delimiter : delimiter + newContent;
+  if (startLine) {
+    const startLineIndex = currentContent.indexOf(startLine);
+    if (startLineIndex > -1)
+      index = reversedOrder ? startLineIndex : startLineIndex + startLine.length;
+    else
+      newContent = reversedOrder ? newContent + startLine : startLine + newContent;
   }
+  const content = currentContent.slice(0, index) + newContent + currentContent.slice(index);
+  if (currentContent != content)
+    await vault.modify(noteFile, content);
 }
 function base64ToString(base64) {
   return Buffer.from(base64, "base64").toString("utf-8");
@@ -92554,7 +92565,7 @@ async function getUnprocessedMessages(plugin) {
         return false;
       const reactions = (_a2 = msg.reactions) == null ? void 0 : _a2.results;
       if (reactions && reactions.find(
-        (reaction) => reaction.reaction instanceof import_telegram5.Api.ReactionEmoji && reaction.reaction.emoticon == "\u{1F44D}"
+        (reaction) => reaction.reaction instanceof import_telegram5.Api.ReactionEmoji && ["\u{1F44D}", "\u{1F44C}"].includes(reaction.reaction.emoticon)
       ))
         return false;
       return true;
@@ -93191,7 +93202,8 @@ function createDefaultMessageDistributionRule() {
     templateFilePath: "",
     notePathTemplate: `${defaultTelegramFolder}/${defaultNoteNameTemplate}`,
     filePathTemplate: `${defaultTelegramFolder}/{{file:type}}s/${defaultFileNameTemplate}`,
-    reversedOrder: false
+    reversedOrder: false,
+    heading: ""
   };
 }
 function createBlankMessageDistributionRule() {
@@ -93201,7 +93213,8 @@ function createBlankMessageDistributionRule() {
     templateFilePath: "",
     notePathTemplate: "",
     filePathTemplate: "",
-    reversedOrder: false
+    reversedOrder: false,
+    heading: ""
   };
 }
 function extractConditionsFromFilterQuery(messageFilterQuery) {
@@ -94906,11 +94919,14 @@ var MessageDistributionRulesModal = class extends import_obsidian9.Modal {
       this.messageDistributionRule = createBlankMessageDistributionRule();
   }
   async display() {
+    this.modalEl.style.height = "90vh";
+    this.modalEl.style.width = "60vw";
     this.addHeader();
     this.addMessageFilter();
     this.addTemplateFilePath();
     this.addNotePathTemplate();
     this.addFilePathTemplate();
+    this.addHeading();
     this.addMessageSortingMode();
     this.addFooterButtons();
   }
@@ -94964,15 +94980,25 @@ var MessageDistributionRulesModal = class extends import_obsidian9.Modal {
     });
     setSettingStyles(setting);
   }
+  addHeading() {
+    const setting = new import_obsidian9.Setting(this.messageDistributionRulesDiv);
+    setting.setName("Heading").setDesc("Specify the heading under which new messages will be inserted").addText((text) => {
+      text.setPlaceholder(`example: ### Log`).setValue(this.messageDistributionRule.heading).onChange(async (value) => {
+        this.messageDistributionRule.heading = value;
+      });
+    });
+    setSettingStyles(setting);
+  }
   addMessageSortingMode() {
     const setting = new import_obsidian9.Setting(this.messageDistributionRulesDiv);
-    setting.setName("New messages first").setDesc("Turn on to have new messages appear at the beginning of the note").addToggle((toggle) => {
+    setting.setName("Reversed order").setDesc(
+      "Turn on to have new messages appear at the beginning of the note, or, if a heading is specified, above it"
+    ).addToggle((toggle) => {
       toggle.setValue(this.messageDistributionRule.reversedOrder);
       toggle.onChange(async (value) => {
         this.messageDistributionRule.reversedOrder = value;
       });
     });
-    setSettingStyles(setting);
   }
   addFooterButtons() {
     this.messageDistributionRulesDiv.createEl("br");
@@ -95018,10 +95044,18 @@ var MessageDistributionRulesModal = class extends import_obsidian9.Modal {
 function setSettingStyles(setting) {
   setting.infoEl.style.width = "55%";
   setting.controlEl.style.width = "45%";
-  const textareaElement = setting.controlEl.querySelector("textarea");
-  if (textareaElement) {
-    textareaElement.style.height = "4.5em";
-    textareaElement.style.width = "100%";
+  const el = setting.controlEl.firstElementChild;
+  if (!el)
+    return;
+  if (el instanceof HTMLTextAreaElement) {
+    el.style.height = "4.5em";
+    el.style.width = "100%";
+  }
+  if (el instanceof HTMLInputElement) {
+    el.style.width = "100%";
+  }
+  if (el instanceof HTMLDivElement && el.className == "search-input-container") {
+    el.style.width = "100%";
   }
 }
 
@@ -95706,6 +95740,7 @@ async function finalizeMessageProcessing(plugin, msg, error) {
     return;
   }
   const originalMsg = msg.originalUserMsg;
+  const mediaMessages = msg.mediaMessages || [];
   if (originalMsg) {
     await plugin.bot.deleteMessage(msg.chat.id, msg.message_id);
   }
@@ -95715,13 +95750,17 @@ async function finalizeMessageProcessing(plugin, msg, error) {
   if (plugin.settings.deleteMessagesFromTelegram && originalMsg) {
     await originalMsg.delete();
   } else if (plugin.settings.deleteMessagesFromTelegram && hoursDifference <= 24) {
+    for (const mediaMsg of mediaMessages) {
+      await plugin.bot.deleteMessage(mediaMsg.chat.id, mediaMsg.message_id);
+    }
     await plugin.bot.deleteMessage(msg.chat.id, msg.message_id);
   } else {
     let needReply = true;
     let errorMessage = "";
     try {
       if (plugin.settings.telegramSessionType == "user" && plugin.botUser) {
-        await enqueue(sendReaction, plugin.botUser, msg, "\u{1F44D}");
+        const emoticon = msg.edit_date ? "\u{1F44C}" : "\u{1F44D}";
+        await enqueue(sendReaction, plugin.botUser, msg, emoticon);
         needReply = false;
       }
     } catch (e) {
@@ -95729,13 +95768,14 @@ async function finalizeMessageProcessing(plugin, msg, error) {
 
 Can't "like" the message, ${e}`;
     }
+    const ok_msg = msg.edit_date ? "...\u{1F197}..." : "...\u2705...";
     if (needReply && originalMsg) {
       await originalMsg.reply({
-        message: "...\u2705..." + errorMessage,
+        message: ok_msg + errorMessage,
         silent: true
       });
     } else if (needReply) {
-      await ((_a = plugin.bot) == null ? void 0 : _a.sendMessage(msg.chat.id, "...\u2705..." + errorMessage, {
+      await ((_a = plugin.bot) == null ? void 0 : _a.sendMessage(msg.chat.id, ok_msg + errorMessage, {
         reply_to_message_id: msg.message_id,
         disable_notification: true
       }));
@@ -96095,7 +96135,7 @@ async function handleMessageText(plugin, msg, distributionRule) {
     plugin.app.vault,
     notePath,
     formattedContent,
-    "",
+    distributionRule.heading,
     plugin.settings.defaultMessageDelimiter ? defaultDelimiter : "",
     distributionRule.reversedOrder
   );
@@ -96215,6 +96255,7 @@ async function handleMediaGroup(plugin, distributionRule) {
   if (mediaGroups.length > 0 && plugin.messagesLeftCnt == 0) {
     for (const mg of mediaGroups) {
       try {
+        mg.initialMsg.mediaMessages = mg.mediaMessages;
         const noteContent = await createNoteContent(
           plugin,
           mg.notePath,
@@ -96239,6 +96280,7 @@ async function appendFileToNote(plugin, msg, distributionRule, filePath, error) 
     mediaGroup.filesPaths.push(filePath);
     if (msg.caption || !mediaGroup.initialMsg)
       mediaGroup.initialMsg = msg;
+    mediaGroup.mediaMessages.push(msg);
     if (error)
       mediaGroup.error = error;
     return;
@@ -96254,6 +96296,7 @@ async function appendFileToNote(plugin, msg, distributionRule, filePath, error) 
       id: msg.media_group_id,
       notePath,
       initialMsg: msg,
+      mediaMessages: [],
       error,
       filesPaths: [filePath]
     };
@@ -96302,6 +96345,9 @@ async function connect2(plugin) {
     });
     bot.on("channel_post", async (msg) => {
       await enqueueByCondition(!plugin.settings.parallelMessageProcessing, handleMessage, plugin, msg, true);
+    });
+    bot.on("edited_message", async (msg) => {
+      await enqueueByCondition(!plugin.settings.parallelMessageProcessing, handleMessage, plugin, msg);
     });
     bot.on("message", async (msg) => {
       await enqueueByCondition(!plugin.settings.parallelMessageProcessing, handleMessage, plugin, msg);

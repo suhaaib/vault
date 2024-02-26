@@ -1,10 +1,10 @@
 {
   "dateHighlightedFormat": "yyyy-MM-dd HH:mm:ss",
   "dateSavedFormat": "yyyy-MM-dd HH:mm:ss",
-  "apiKey": "",
+  "apiKey": "20e1695c-fe6c-4087-ad17-3118c8cab22b",
   "filter": "ALL",
-  "syncAt": "",
-  "customQuery": "",
+  "syncAt": "2024-02-26T15:00:12",
+  "customQuery": "in:all",
   "template": "Title:: {{{title}}}\nDate:: {{{datePublished}}}\nLink:: {{{originalUrl}}}\n{{#labels.length}}\nStatus:: {{#labels}} #status/{{{name}}}\n{{/labels}}\n{{/labels.length}}\n{{#author}}\nAuthor(s): {{{author}}}\n{{/author}}\n\n---\n\n# {{{title}}}\n\n{{#highlights.length}}\n## Highlights\n\n{{#highlights}}\n> {{{text}}} [⤴️]({{{highlightUrl}}})\n{{#note}}\n\n## Literature Notes\n\n{{{note}}}\n{{/note}}\n\n{{/highlights}}\n{{/highlights.length}}",
   "highlightOrder": "LOCATION",
   "syncing": false,
@@ -14,10 +14,11 @@
   "filename": "{{{title}}}",
   "filenameDateFormat": "yyyy-MM-dd",
   "attachmentFolder": "_bin/images",
-  "version": "1.9.3",
+  "version": "1.9.4",
   "isSingleFile": false,
   "frequency": 0,
   "intervalId": 0,
   "frontMatterVariables": [],
-  "frontMatterTemplate": ""
+  "frontMatterTemplate": "",
+  "syncOnStart": true
 }

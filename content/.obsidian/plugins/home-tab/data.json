@@ -24,24 +24,24 @@
   "unresolvedLinks": false,
   "recentFilesStore": [
     {
-      "filepath": "04 Archives/Agile vs Waterfall.md",
-      "timestamp": 1708745865775
-    },
-    {
       "filepath": "02 Areas/Business Analytics.md",
-      "timestamp": 1708745860523
+      "timestamp": 1708977693672
     },
     {
-      "filepath": "04 Archives/Business Analyst Certifications.md",
-      "timestamp": 1708745767924
+      "filepath": "02 Areas/SQL.md",
+      "timestamp": 1708828598225
     },
     {
-      "filepath": "02 Areas/Data Visualization.md",
-      "timestamp": 1708744345489
+      "filepath": "02 Areas/02 Areas.md",
+      "timestamp": 1708828596127
     },
     {
-      "filepath": "00 Journal/2024/Daily/02/2024-02-23.md",
-      "timestamp": 1708744278128
+      "filepath": "00 Journal/00 Journal.md",
+      "timestamp": 1708828572424
+    },
+    {
+      "filepath": "01 Projects/Business Analyst Interview Prep.md",
+      "timestamp": 1708828570973
     }
   ],
   "starredFileStore": [],

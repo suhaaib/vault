@@ -38,3 +38,39 @@ A stakeholder is an individual, group, or organization that has an interest in a
 - What is a business rule?
 
 - What are the requirement elicitation techniques you have used in the past?
+
+2/23/2024, 5:05:17 PM **[Top 80] Business Analyst Interview Questions and Answers** ThePrefectBA
+
+[01:00](https://www.youtube.com/watch?v=YxNMzdYoXR0&t=60.913886s) 
+
+[01:24](https://www.youtube.com/watch?v=YxNMzdYoXR0&t=84.536726s)   What is the  difference between verification and validation of a requirement?
+
+[33:39](https://www.youtube.com/watch?v=YxNMzdYoXR0&t=2019.22505s) What is Requirement Traceability Matrix (RTM)?
+
+[35:22](https://www.youtube.com/watch?v=YxNMzdYoXR0&t=2122.790804s)  Requirements Prioritization Techniques:
+
+- MOSCOW
+
+- Ranking
+
+- KANO Analysis
+
+- User Story Map
+
+[54:53](https://www.youtube.com/watch?v=YxNMzdYoXR0&t=3293.346688s) What is the first Elicitation method you would use?
+
+[54:53](https://www.youtube.com/watch?v=YxNMzdYoXR0&t=3293.879032s) -In you opinion, what is the best Elicitation method?
+
+- Can you tell me about a time when you conducted a workshop?
+
+-What is the challenge faced using workshop and how would you mitigate it?
+
+- How would you conduct interview?
+
+- How would you conduct an observation session?
+
+- Difference between active and passive sessions?
+
+- What is focus group?
+
+- How can you gather requirements from a large number of people?
