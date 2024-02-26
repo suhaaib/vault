@@ -2589,6 +2589,7 @@ Just
 Jagger
 JavaScript
 JOIN
+JIRA
 journal
 jordanhandy
 jmilldotdev

@@ -14,5 +14,21 @@
     {
         "role": "assistant",
         "content": "The note provides a roadmap for becoming a successful business analyst. It's divided into six key stages:\n\n1. **Foundational Knowledge**: It includes understanding the role of a business analyst, the importance of data analysis, and gaining a good grasp of business processes.\n2. **Technical Skills**: This involves mastering data modeling, SQL, and data visualization tools such as Excel, Tableau, or Power BI.\n3. **Business Acumen**: Requires understanding industry trends, analyzing market research, and developing strong problem-solving skills.\n4. **Communication Skills**: Enhancing both written and verbal communication skills, along with stakeholder engagement and active listening is crucial.\n5. **Project Management**: It involves learning various project management methodologies, understanding the process of requirements gathering, and developing time management skills.\n6. Lastly, **Continuous Learning**: This involves staying updated with industry certifications, attending professional events for networking, and engaging in self-learning by using online courses and platforms."
+    },
+    {
+        "role": "user",
+        "content": "make a table of content for this \n0:00:00 - What is Jira?\n0:02:03 - Basics of Agile Methodology\n0:09:21 - Key Agile Terms You'll Find in Jira\n0:13:49 - Jira Terms You Need to Know\n0:17:43 - Getting Familiar with Jira's Interface\n0:28:55 - Team-Managed Projects vs Company-Managed Projects\n0:33:04 - Creating a Team-Managed Project\n0:36:56 - Navigating Team-Managed Projects\n0:40:22 - Creating Issues in Team-Managed Projects\n0:45:21 - Customizing Team-Managed Projects\n0:55:52 - Creating a Company-Managed Project\n1:00:39 - Navigating Company-Managed Projects\n1:08:01 - Creating a New Scrum Board\n1:13:35 - Scrum Agile Board Overview\n1:24:42 - Customizing Scrum Boards"
+    },
+    {
+        "role": "assistant",
+        "content": "Sure, here is the table of content:\n\n- **0:00:00** - Introduction: What is Jira?\n- **0:02:03** - Part 1: Basics of Agile Methodology\n- **0:09:21** - Part 2: Key Agile Terms You'll Find in Jira\n- **0:13:49** - Part 3: Jira Terms You Need to Know\n- **0:17:43** - Part 4: Getting Familiar with Jira's Interface\n- **0:28:55** - Part 5: Understanding Team-Managed Projects vs Company-Managed Projects\n- **0:33:04** - Part 6: Creating a Team-Managed Project\n- **0:36:56** - Part 7: Navigating Team-Managed Projects\n- **0:40:22** - Part 8: Creating Issues in Team-Managed Projects\n- **0:45:21** - Part 9: Customizing Team-Managed Projects\n- **0:55:52** - Part 10: Creating a Company-Managed Project\n- **1:00:39** - Part 11: Navigating Company-Managed Projects\n- **1:08:01** - Part 12: Creating a New Scrum Board\n- **1:13:35** - Part 13: Scrum Agile Board Overview\n- **1:24:42** - Part 14: Customizing Scrum Boards"
+    },
+    {
+        "role": "user",
+        "content": "remove the timestamps"
+    },
+    {
+        "role": "assistant",
+        "content": "<div class=\"errorBotMessage\"><p>Error: Incorrect API key provided: sk-E4fis***************************************8xEE. You can find your API key at https://platform.openai.com/account/api-keys.</p></div>"
     }
 ]

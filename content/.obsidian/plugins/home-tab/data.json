@@ -25,7 +25,15 @@
   "recentFilesStore": [
     {
       "filepath": "02 Areas/Business Analytics.md",
-      "timestamp": 1708977693672
+      "timestamp": 1708980572663
+    },
+    {
+      "filepath": "02 Areas/Project Management.md",
+      "timestamp": 1708980541587
+    },
+    {
+      "filepath": "02 Areas/JIRA.md",
+      "timestamp": 1708980424581
     },
     {
       "filepath": "02 Areas/SQL.md",
@@ -34,14 +42,6 @@
     {
       "filepath": "02 Areas/02 Areas.md",
       "timestamp": 1708828596127
-    },
-    {
-      "filepath": "00 Journal/00 Journal.md",
-      "timestamp": 1708828572424
-    },
-    {
-      "filepath": "01 Projects/Business Analyst Interview Prep.md",
-      "timestamp": 1708828570973
     }
   ],
   "starredFileStore": [],

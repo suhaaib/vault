@@ -26,7 +26,7 @@ tags:
    - Enhance verbal communication for presentations and meetings [[Verbal Communication Skills]]
    - Practice active listening and stakeholder engagement [[Stakeholder Engagement]]
 5. **Project Management**
-   - Learn project management methodologies like Agile or Waterfall [[Agile vs Waterfall]]
+   - Learn project management methodologies like Agile or Waterfall [[Agile vs Waterfall]] and tools like [[JIRA]]
    - Understand requirements gathering and documentation [[Requirements Gathering Process]]
    - Develop skills in prioritizing tasks and managing timelines [[Time Management Techniques]]
 6. **Continuous Learning**
@@ -34,6 +34,6 @@ tags:
    - Attend workshops, webinars, and conferences for networking [[Professional Development Events]]
    - Engage in online courses or self-study to expand your skill set [[Online Learning Platforms]]
 
+### Resources
 
----
-
+- [Data Analyst Bootcamp for Beginners (SQL, Tableau, Power BI, Python, Excel, Pandas, Projects, more) - YouTube](https://youtu.be/PSNXoAs2FtQ?si=H957CN9sXWHdO3hT)

@@ -19,8 +19,56 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "6371f670f74f2408",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "02 Areas/Business Analytics.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "84513084de0faf7f",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "02 Areas/JIRA.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "f6850037646b0ed2",
+            "type": "leaf",
+            "state": {
+              "type": "home-tab-view",
+              "state": {}
+            }
+          },
+          {
+            "id": "c0beb833a3dc9219",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "02 Areas/Project Management.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -187,12 +235,15 @@
       "bmo-chatbot:BMO Chatbot": false
     }
   },
-  "active": "59eb75eefbce005c",
+  "active": "1004da06164859e3",
   "lastOpenFiles": [
+    "02 Areas/Project Management.md",
+    "02 Areas/JIRA.md",
+    "02 Areas/Business Analytics.md",
+    "Untitled.md",
     "02 Areas/02 Areas.md",
     "00 Journal/00 Journal.md",
     "01 Projects/Business Analyst Interview Prep.md",
-    "Untitled.md",
     "index.md",
     "03 Resources/Articles/A Brief History & Ethos of the Digital Garden.md",
     "03 Resources/Articles/A Brief History & Ethos of the Digital Garden-23bf82e0-1c14-42b6-921d-1c757c3ebb88.md",
@@ -201,7 +252,6 @@
     "03 Resources/Articles/Getting Started with Omnivore.md",
     "03 Resources/Articles/The Secret Power of ‘Read It Later’ Apps.md",
     "03 Resources/Articles/Organize your Omnivore library with labels.md",
-    "02 Areas/Business Analytics.md",
     "04 Archives/Agile vs Waterfall.md",
     "04 Archives/Business Analyst Certifications.md",
     "02 Areas/Data Visualization.md",
@@ -213,8 +263,6 @@
     "02 Areas/SQL.md",
     "03 Resources/Videos/Videos.md",
     "02 Areas/index.md",
-    "_bin/templates/folder note template.md",
-    "01 Projects/01 Projects.md",
     "03 Resources/Videos",
     "_bin/images/The Power of Now - Eckhart Tolle/2776ea0fc149c7b8ebb22ce33431c0c8_MD5.jpg",
     "_bin/images/The Power of Now - Eckhart Tolle",
