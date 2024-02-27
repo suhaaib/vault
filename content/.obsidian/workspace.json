@@ -73,7 +73,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "02 Areas/Hyderabad.md",
+                "file": "02 Areas/Business Analytics.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -139,8 +139,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 330.5,
-    "collapsed": true
+    "width": 330.5
   },
   "right": {
     "id": "7496b67f21e2e34b",
@@ -156,7 +155,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "02 Areas/Hyderabad.md",
+                "file": "02 Areas/Business Analytics.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -173,7 +172,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "02 Areas/Hyderabad.md",
+                "file": "02 Areas/Business Analytics.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -196,7 +195,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "02 Areas/Hyderabad.md"
+                "file": "02 Areas/Business Analytics.md"
               }
             }
           },
@@ -244,14 +243,15 @@
   },
   "active": "255abe40e2e3ad62",
   "lastOpenFiles": [
-    "02 Areas/Hyderabad.md",
+    "01 Projects/Business Analyst Interview Prep.md",
+    "01 Projects/01 Projects.md",
     "02 Areas/Business Analytics.md",
+    "02 Areas/Hyderabad.md",
     "02 Areas/Project Management.md",
     "02 Areas/JIRA.md",
     "Untitled.md",
     "02 Areas/02 Areas.md",
     "00 Journal/00 Journal.md",
-    "01 Projects/Business Analyst Interview Prep.md",
     "index.md",
     "03 Resources/Articles/A Brief History & Ethos of the Digital Garden.md",
     "03 Resources/Articles/A Brief History & Ethos of the Digital Garden-23bf82e0-1c14-42b6-921d-1c757c3ebb88.md",
@@ -269,7 +269,6 @@
     "02 Areas/Tableau.md",
     "04 Archives/Business Analyst Role.md",
     "02 Areas/SQL.md",
-    "03 Resources/Videos/Videos.md",
     "03 Resources/Videos",
     "_bin/images/The Power of Now - Eckhart Tolle/2776ea0fc149c7b8ebb22ce33431c0c8_MD5.jpg",
     "_bin/images/The Power of Now - Eckhart Tolle",
