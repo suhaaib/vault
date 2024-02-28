@@ -24,6 +24,10 @@
   "unresolvedLinks": false,
   "recentFilesStore": [
     {
+      "filepath": "03 Resources/03 Resources.md",
+      "timestamp": 1709158947761
+    },
+    {
       "filepath": "02 Areas/Business Analytics.md",
       "timestamp": 1709004407971
     },
@@ -38,10 +42,6 @@
     {
       "filepath": "02 Areas/Hyderabad.md",
       "timestamp": 1708982877232
-    },
-    {
-      "filepath": "02 Areas/Project Management.md",
-      "timestamp": 1708980541587
     }
   ],
   "starredFileStore": [],

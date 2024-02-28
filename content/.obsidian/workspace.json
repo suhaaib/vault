@@ -73,7 +73,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "02 Areas/Business Analytics.md",
+                "file": "03 Resources/03 Resources.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -155,7 +155,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "02 Areas/Business Analytics.md",
+                "file": "03 Resources/03 Resources.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -172,7 +172,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "02 Areas/Business Analytics.md",
+                "file": "03 Resources/03 Resources.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -195,7 +195,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "02 Areas/Business Analytics.md"
+                "file": "03 Resources/03 Resources.md"
               }
             }
           },
@@ -241,11 +241,11 @@
       "bmo-chatbot:BMO Chatbot": false
     }
   },
-  "active": "255abe40e2e3ad62",
+  "active": "1004da06164859e3",
   "lastOpenFiles": [
+    "02 Areas/Business Analytics.md",
     "01 Projects/Business Analyst Interview Prep.md",
     "01 Projects/01 Projects.md",
-    "02 Areas/Business Analytics.md",
     "02 Areas/Hyderabad.md",
     "02 Areas/Project Management.md",
     "02 Areas/JIRA.md",
